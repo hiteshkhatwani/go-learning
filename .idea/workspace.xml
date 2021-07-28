@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c6ebc9dd-af15-4a36-b685-83366ed084fc" name="Default Changelist" comment="" />
+    <list default="true" id="915f120d-fa9a-4ea8-8253-eaea84c52450" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/binarysearchtree/binarysearchtree/bst.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/binarysearchtree/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/binarysearchtree/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linkedlist/.idea/linkedlist.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linkedlist/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linkedlist/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/linkedlist/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linkedlist/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/linkedlist/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linkedlist/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/linkedlist/go.sum" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,10 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GoLibraries">
-    <option name="indexEntireGoPath" value="false" />
-  </component>
-  <component name="ProjectId" id="1vqfgrJbXKXzAMS0fjTLaMqNxbh" />
+  <component name="ProjectId" id="1vvjHskJAZtyVJDZ7AtBaMhfMaG" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -31,42 +39,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="configurable..is.expanded" value="true" />
-    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="go.vgo" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
-      <module name="go-learning" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind value="PACKAGE" />
-      <package value="testproject" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <method v="2" />
-    </configuration>
     <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="go-learning" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$/cmd/app/main.go" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
-      <module name="go-learning" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <kind value="DIRECTORY" />
-      <package value="testproject" />
-      <directory value="$PROJECT_DIR$" />
-      <filePath value="$PROJECT_DIR$" />
-      <framework value="gotest" />
+      <filePath value="$PROJECT_DIR$/linkedlist/main.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -89,9 +72,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VgoProject">
-    <integration-enabled>true</integration-enabled>
   </component>
 </project>
