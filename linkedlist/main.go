@@ -1,25 +1,24 @@
 package main
 
 import (
-	"go.uber.org/zap"
+	"fmt"
 	ll "linkedlist/linkedlist"
 )
 
 func main()  {
-	logger, _ := zap.NewDevelopment()
-	defer logger.Sync()
-	ll.Logger = logger
-	logger.Info("Initializing first linkedlist")
+	ll.Changeloglevel("Info")
 	l1 := &ll.Linkedlist{}
-	l1.Insert(4)
-	l1.Insert(43)
+	l1.Insert(2)
+	l1.Insert(3)
 	l1.Insert(54)
-	logger.Info("Initializing second linkedlist")
+	fmt.Println("Initializing second linkedlist")
 	l2 :=&ll.Linkedlist{}
+	l1.Merge(l2)
 	l2.Insert(3)
 	l2.Insert(78)
-	logger.Info("Merging both the linkedlist")
-	l3 := ll.Merge(l1, l2)
-	l3.Print()
+	fmt.Println("Merging both the linkedlist")
+	l1.Merge(l2)
+	l1.Print()
 	return
 }
+

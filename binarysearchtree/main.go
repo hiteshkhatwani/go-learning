@@ -3,15 +3,14 @@ package main
 import (
 	bst "binarysearchtree/binarysearchtree"
 	"fmt"
-	"go.uber.org/zap"
+	//"go.uber.org/zap"
 )
 
 func main() {
-	logger, _ := zap.NewDevelopment()
-	defer logger.Sync()
-	bst.Logger = logger
+	bst.Changeloglevel("Debug")
 	fmt.Println("Creating BST")
 	bstree := &bst.BST{}
+	bstree.Inorder()
 	// adding nodes into the tree
 	bstree.Insert(3)
 	bstree.Insert(1)

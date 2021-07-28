@@ -1,11 +1,20 @@
 package binarysearchtree
 
 import (
-	"fmt"
+	//"fmt"
 	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
+	"os"
 )
 
-var Logger *zap.Logger
+var encoderCfg = zap.NewProductionEncoderConfig()
+var atomicLevel = zap.NewAtomicLevelAt(zap.InfoLevel)
+var Logger = zap.New(zapcore.NewCore(
+	zapcore.NewJSONEncoder(encoderCfg),
+	zapcore.Lock(os.Stdout),
+	atomicLevel,
+))
+
 
 type Node struct {
 	left, right *Node
@@ -19,9 +28,9 @@ type BST struct {
 func (bst *BST) Insert(val int) {
 	if bst.root == nil {
 		bst.root = &Node{val: val}
-		Logger.Info("Created Root node", zap.Int("Root value", val))
+		Logger.Debug("Created Root node", zap.Int("Root value", val))
 	} else {
-		Logger.Info("Calling the helper func to insert the new node")
+		Logger.Debug("Calling the helper func to insert the new node")
 		bst.root.insert(val)
 	}
 	return
@@ -35,14 +44,14 @@ func (n *Node) insert(val int) {
 	if val <= n.val {
 		if n.left == nil {
 			n.left = &Node{val: val}
-			Logger.Info("Created new node", zap.Int("Parent value", n.val), zap.Int("Child value", val))
+			Logger.Debug("Created new node", zap.Int("Parent value", n.val), zap.Int("Child value", val))
 		} else {
 			n.left.insert(val)
 		}
 	} else {
 		if n.right == nil {
 			n.right = &Node{val: val}
-			Logger.Info("Created new node", zap.Int("Parent value", n.val), zap.Int("Child value", val))
+			Logger.Debug("Created new node", zap.Int("Parent value", n.val), zap.Int("Child value", val))
 		} else {
 			n.right.insert(val)
 		}
@@ -52,9 +61,9 @@ func (n *Node) insert(val int) {
 
 func (bst *BST) Inorder()  {
 	if bst.root == nil {
-		Logger.Error("Inorder traversal called for an empty tree")
+		Logger.Warn("Inorder traversal called for an empty tree")
 	} else {
-		Logger.Info("Helper inorder traversal called")
+		Logger.Debug("Helper inorder traversal called")
 		bst.root.inorder()
 	}
 	return
@@ -65,7 +74,19 @@ func (n *Node) inorder() {
 		return
 	}
 	n.left.inorder()
-	fmt.Println(n.val)
+	Logger.Info("Node", zap.Int("Value", n.val))
 	n.right.inorder()
+	return
+}
+
+func Changeloglevel(newlevel string) {
+	switch newlevel {
+	case "Debug":
+		atomicLevel.SetLevel(zapcore.DebugLevel)
+	case "Warn":
+		atomicLevel.SetLevel(zapcore.WarnLevel)
+	default:
+		atomicLevel.SetLevel(zapcore.InfoLevel)
+	}
 	return
 }
